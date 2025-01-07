@@ -9,13 +9,13 @@ const Navbar = () => {
         )
       ),
       React.createElement('div', { className: 'social-links' },
-        React.createElement('a', { href: 'https://www.facebook.com/toryskateshop', target: '_blank', rel: 'noopener noreferrer' },
+        React.createElement('a', { href: 'https://www.instagram.com/hanapaints_/', target: '_blank', rel: 'noopener noreferrer' },
           React.createElement('img', { src: '/fb.png', alt: 'Facebook' })
         ),
-        React.createElement('a', { href: 'https://www.instagram.com/toryskateshop/', target: '_blank', rel: 'noopener noreferrer' },
+        React.createElement('a', { href: 'https://www.instagram.com/hanapaints_/', target: '_blank', rel: 'noopener noreferrer' },
           React.createElement('img', { src: '/ig.png', alt: 'instagram' })
         ),
-        React.createElement('a', { href: 'https://wa.link/6p0b6o', target: '_blank', rel: 'noopener noreferrer' },
+        React.createElement('a', { href: 'https://www.instagram.com/hanapaints_/', target: '_blank', rel: 'noopener noreferrer' },
         React.createElement('img', { src: '/wa.png', alt: 'whatsapp' })
       )
         // Agrega más enlaces a otras redes sociales si es necesario
