@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react'
-import { Canvas, useLoader } from '@react-three/fiber';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls} from '@react-three/drei';
 import { useMotionValue, useSpring, useScroll, useTransform } from 'framer-motion';
@@ -33,7 +33,23 @@ export default function Index() {
 function Cube({progress}) {
 
     const mesh = useRef(null);
-   
+
+    // Animación armónica continua - movimiento sutil
+    useFrame((state) => {
+        if (mesh.current) {
+            const time = state.clock.getElapsedTime();
+
+            // Movimiento armónico en Y (oscilación vertical suave)
+            mesh.current.position.y = Math.sin(time * 0.8) * 0.5;
+
+            // Movimiento armónico en X (oscilación horizontal suave)
+            mesh.current.position.x = Math.cos(time * 0.6) * 0.3;
+
+            // Rotación armónica adicional sutil
+            mesh.current.rotation.z = Math.sin(time * 0.5) * 0.2;
+        }
+    });
+
     // const options = {
     //     damping: 20
     // }
